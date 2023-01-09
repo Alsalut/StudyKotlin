@@ -7,12 +7,34 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_activity_maz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/str_tv_hello"
+        app:layout_constraintBottom_toTopOf="@+id/btn_activity_main"
+        app:layout_constraintEnd_toEndOf="@+id/btn_activity_main"
+        app:layout_constraintStart_toStartOf="@+id/btn_activity_main"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_activity_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_btn_execute"
+        app:layout_constraintBottom_toTopOf="@+id/et_activity_main"
+        app:layout_constraintEnd_toEndOf="@+id/et_activity_main"
+        app:layout_constraintStart_toStartOf="@+id/et_activity_main"
+        app:layout_constraintTop_toBottomOf="@+id/tv_activity_maz" />
+
+    <EditText
+        android:id="@+id/et_activity_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/str_input_name"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_activity_main" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
